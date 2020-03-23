@@ -36,21 +36,29 @@ public class ControlExercises {
 
         //        Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000.
 // 65536 * 65536 = 4294967296 (4billion whatever) - this is EXACTLY twice the max value of integer
+//        long a = 2;
+//        int counter1 = 0;
+//        do {
+//            System.out.println("\n=================================");
+//            System.out.println("Current loop: " + counter1);
+//
+////            if(a == 0){
+////                System.out.println(a);
+////                break;
+////            }
+//
+//            System.out.print("\nValue of a: " + a + "\n");
+//            a *= a;
+//
+//            counter1++;
+//        } while (a <= 1000000);
+
+
+
         long a = 2;
-        int counter1 = 0;
         do {
-            System.out.println("\n=================================");
-            System.out.println("Current loop: " + counter1);
-
-//            if(a == 0){
-//                System.out.println(a);
-//                break;
-//            }
-
-            System.out.print("\nValue of a: " + a + "\n");
+            System.out.println(a);
             a *= a;
-
-            counter1++;
         } while (a <= 1000000);
 
 
