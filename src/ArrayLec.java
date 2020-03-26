@@ -6,10 +6,10 @@ public class ArrayLec {
 
     public static void main(String[] args) {
 
-        /* ***************   ******** ********************* */
-        /* ******** WORKING WITH ARRAY ELEMENTS *********** */
-        /* ************* ITERATING ARRAYS ***************** */
-        /* ***************   ******** ********************* */
+        /* ***************    ******** ********************* */
+        /* ********  WORKING WITH ARRAY ELEMENTS *********** */
+        /* *************  ITERATING ARRAYS ***************** */
+        /* ***************    ******** ********************* */
 
         // TODO: 1. Declare an int array called numbers without populating it
         //       2. Declare a String array called words with a length of 10
