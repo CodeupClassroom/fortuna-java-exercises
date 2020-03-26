@@ -1,6 +1,6 @@
 package shapes;
 
-import exercise.util.Input;
+import util.Input;
 
 import java.util.Scanner;
 
