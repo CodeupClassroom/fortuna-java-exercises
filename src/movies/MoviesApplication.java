@@ -44,15 +44,13 @@ public class MoviesApplication {
             choice = Input.getInt(0, count - 1, "Enter your choice: ");
 
             // Set up a switch statement to choose what to display / do
-            if (choice != 0 && choice != 8) {
+            if (choice != 0 && choice != 2) {
                 // iterate through all movies and print them out based on user's input choice
                 for (Movie movie : movieList) {
                     switch (choice) {
                         case 1:
                             System.out.printf("\t%s -- %S\n", movie.getName(), movie.getCategory());
                             break;
-                        case 2:
-                            break; // If they chose to add a movie, we don't want to show any of these
                         default:
                             if (movie.getCategory().equalsIgnoreCase(genres[choice-3])) {
                                 System.out.printf("\t%s -- %S\n", movie.getName(), movie.getCategory());
@@ -96,11 +94,11 @@ public class MoviesApplication {
     private static String[] getGenres(Movie[] oldList) {
         int count = 1;
         String categories = oldList[0].getCategory();
-        System.out.println(oldList.length);
+//        System.out.println(oldList.length);
         // "drama,action,horror"
 
         for (Movie movie : oldList) {
-            System.out.println(movie.getName());
+//            System.out.println(movie.getName());
             if (!categories.contains(movie.getCategory())) {
                 if (count > 0) {
                     categories += ",";
@@ -108,8 +106,8 @@ public class MoviesApplication {
                 categories += movie.getCategory();
                 count++;
             }
-            System.out.println(categories);
-            System.out.println(count);
+//            System.out.println(categories);
+//            System.out.println(count);
         }
 
         return categories.split(",");
