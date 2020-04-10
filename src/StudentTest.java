@@ -28,10 +28,20 @@ public class StudentTest {
     }
 
     @Test
-    public void testAddGradeAndGetGradeAverage() {
+    public void testAddGrade() {
         Student s = new Student("New");
         s.addGrade(98);
         assertEquals(98, s.getGradeAverage());
+    }
+
+    @Test
+    public void testGetGradeAverage() {
+        Student s = new Student("New");
+        s.addGrade(100);
+        s.addGrade(90);
+        s.addGrade(80);
+        s.addGrade(70);
+        assertEquals(85, s.getGradeAverage());
     }
 
     @Test
