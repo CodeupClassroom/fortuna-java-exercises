@@ -29,14 +29,13 @@ public class GradesApplication {
         System.out.println("\n\n\tWelcome!\n\n\tHere are teh Github usernames of our students:\n");
         System.out.println("\t" + students.keySet());
 
-        // Create a scanner for user input
-        Scanner scanner = new Scanner(System.in);
-        Input.setScanner(scanner);
+        // Create an Input for user input
+        Input input = new Input();
 
         String ghUser;
         boolean confirmation = true;
         do {
-            ghUser = Input.getString("\tWhich student's stats would you like to view?: ");
+            ghUser = input.getString("\tWhich student's stats would you like to view?: ");
             // check if typed in user actually exists
             if(!students.containsKey(ghUser)){
                 System.out.println("\n\tNo student with that Github username was found. :-(");
@@ -45,7 +44,7 @@ public class GradesApplication {
                 Student thisStudent = students.get(ghUser);
                 System.out.println("\n\n\tName: " + thisStudent.getName() + " || GH u/n: " + ghUser + " || Current grade avg: " + thisStudent.getGradeAverage());
             }
-            confirmation = Input.yesNo("\tWould you like to see another? [y/N]");
+            confirmation = input.yesNo("\tWould you like to see another? [y/N]");
 
         } while(confirmation); // once the user says they no longer want to participate, EXIT
 

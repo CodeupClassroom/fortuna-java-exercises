@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class MoviesApplication {
 
     public static String[] genres;
+    static Input input;
 
     public static void main(String[] args) throws Exception {
         //Give the user a list of options for viewing all the movies or viewing movies by category.
@@ -16,9 +17,7 @@ public class MoviesApplication {
         //Your application should continue to run until the user chooses to exit.
 
         //Give the user a list of options for viewing all the movies or viewing movies by category.
-        Input input = new Input();
-        Scanner scanner = new Scanner(System.in);
-        Input.setScanner(scanner);
+        input = new Input();
         Movie[] movieList = MoviesArray.findAll();
 
         genres = getGenres(movieList);
@@ -41,7 +40,7 @@ public class MoviesApplication {
             }
             System.out.println("");
 
-            choice = Input.getInt(0, count - 1, "Enter your choice: ");
+            choice = input.getInt(0, count - 1, "Enter your choice: ");
 
             // Set up a switch statement to choose what to display / do
             if (choice != 0 && choice != 2) {
@@ -71,8 +70,8 @@ public class MoviesApplication {
 
     private static Movie[] addMovie(Movie[] movieList) throws Exception {
         // if the user wants to add a movie, get the title and category, and add to the MovieList array
-        String name = Input.getString("Enter the movie name: ");
-        String category = Input.getString("Enter the movie category: ");
+        String name = input.getString("Enter the movie name: ");
+        String category = input.getString("Enter the movie category: ");
 
         // create a new Movie object
         Movie newMovie = new Movie(name, category);
