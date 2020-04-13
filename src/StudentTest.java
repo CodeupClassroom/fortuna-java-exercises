@@ -48,6 +48,8 @@ public class StudentTest {
     public void testIfConstructorWorked() {
         Student student = new Student();
         assertNotNull(student);
+        Student student02 = new Student(2, "James");
+        assertNotNull(student);
     }
 
     @Test

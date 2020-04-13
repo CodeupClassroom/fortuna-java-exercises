@@ -18,6 +18,12 @@ public class Student {
         this.name = name;
     }
 
+    public Student(long id, String name) {
+        this.id = id;
+        this.name = name;
+        this.grades = new ArrayList<>();
+    }
+
     public static long getCount() {
         return count;
     }
